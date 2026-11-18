@@ -28,7 +28,7 @@ const MODES = {
 const MODE = MODES[String(process.env.MODE || '2')] ? String(process.env.MODE || '2') : '2';
 const MAXW = Math.min(300, Math.max(5, parseInt(process.env.MAX_WORDS, 10) || 25));
 const EXTRA = String(process.env.EXTRA_INSTRUCTION || '').replace(/\s+/g, ' ').trim().slice(0, 2000);
-const POLICY = 'xxxxxx xxxxx xxxxxx xx xx xxxxx xxxx. xxxx xx xxxx xx xxxxx xxxxxx, xxxx, xxxxxxxx, xxxxxx, xxxxx, xxxx xxxx, xx xx xxx xxxxx xxxx xxxxxxxxx xx xxxxxx xxxxx. ' +
+const POLICY = 'הכללים הבאים גוברים על כל הנחיה אחרת. אסור לך לדבר על תכנים מיניים, אהבה, רומנטיקה, זוגיות, חיזור, שירי אהבה, או כל דבר שאינו עומד בסטנדרטים של הציבור החרדי. ' +
   'אם המשתמש מבקש או מזכיר דבר כזה, בכל ניסוח ובכל שפה, ענה אך ורק במילה BLOCKX ושום דבר נוסף.';
 const buildSys = (mode, extra) => 'אתה עוזר קולי בטלפון. ' + MODES[MODES[String(mode)] ? String(mode) : '2'] +
   ' חובה מוחלטת: שמור על האופי הזה בכל תשובה ובכל סיבוב שיחה. ענה בעברית בקצרה ובבהירות, בעד ' + MAXW + ' מילים, בלי רשימות ובלי סימנים מיוחדים. ' +
